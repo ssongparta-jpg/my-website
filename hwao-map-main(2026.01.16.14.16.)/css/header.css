@@ -1,0 +1,100 @@
+header {
+    position: relative;
+    margin: 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.1);
+    z-index: 1200;
+}
+
+.logo-left {
+    position: absolute;
+    height: 22px;
+    left: 22px;
+    top: 15px;
+}
+
+.logo-right {
+    position: absolute;
+    height: 28px;
+    right: 22px;
+    top: 12px;
+}
+
+.header_text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* 행정동 경계 및 행정동명 토글 버튼 */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    z-index: 2000;
+    border: 2px solid white;
+    box-sizing: border-box; /* 테두리를 크기에 포함 */
+    border-radius: 20px;
+  }
+  
+  .toggle-checkbox {
+    display: none; /* 기본 체크박스 숨김 */
+  }
+  
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-label::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-checkbox:checked + .toggle-label {
+    background-color: #007bff;
+  }
+  
+  .toggle-checkbox:checked + .toggle-label::after {
+    transform: translateX(30px);
+  }
+  
+  .toggle-text {
+    position: absolute;
+    background-color: white;
+    width: 64px;
+    text-align: center;
+    padding: 20px 4px 2px 4px;
+    border-radius: 6px;
+    top: 144px;
+    right: 20px;
+    margin-left: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    z-index: 1999;
+  }

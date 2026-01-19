@@ -1,0 +1,49 @@
+.legend {
+    width: 100%;
+    padding: 20px 20px 10px 20px;
+    background: white;
+    font-size: 14px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:6px 12px;
+}
+  
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    cursor: pointer;
+} 
+
+.legend-icon {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 1.2rem;
+    text-shadow:
+      -4px -4px 0 black,
+       4px -4px 0 black,
+      -4px  4px 0 black,
+       4px  4px 0 black;
+}
+
+.legend-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+    z-index: 1200;
+  }
+
+.legend-bar.slide-out {
+    transform: translateY(100%); /* 아래로 밀어 숨김 */
+  }
+
+.legend-count {
+  color: #999;        /* 회색 */
+  font-size: 0.9em;   /* 더 작은 글씨 */
+  font-weight: 400;   /* 더 연한 굵기 */
+  /* 원하는 스타일을 더 추가 */
+} 

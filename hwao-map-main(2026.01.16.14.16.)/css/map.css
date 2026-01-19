@@ -1,0 +1,156 @@
+#map {
+    height: 100%;
+    min-height: 300px; 
+}
+
+.leaflet-tile {
+    filter: saturate(20%) brightness(105%); /* 지도 채도 낮춤 */
+    }
+
+/* 커스텀 마커 스타일 */
+.custom-marker {
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-shape {
+  background: transparent;
+  font-size: 15px;
+  text-align: center;
+  line-height: 18px;
+  text-shadow: 0px 0px 2px black;
+}
+
+/* 팝업 스타일 */
+.leaflet-popup-content {
+    line-height: 1.4;
+    margin: 15px;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 2px 0px 3px 0px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.leaflet-popup-tip {
+  background: #fff;
+}
+
+/* 팝업 안 세부 텍스트 스타일 */
+.custom-popup {
+  font-weight: 400;  
+  font-size: 12px;
+  color: black;
+  position: relative;
+}
+
+.custom-popup .popup-type {
+  display: block;
+  font-size: 11x;
+}
+
+.custom-popup .popup-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.custom-popup .popup-adrs {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: grey;
+}
+
+.custom-popup .popup-phone{
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #555;
+}
+
+.custom-popup .popup-time {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #555;
+}
+
+.custom-popup .popup-more {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: gray;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  position: absolute;
+  right: -10px;
+}
+
+/*행정동 경계 및 행정동명*/
+.boundary-layer {
+  pointer-events: none;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  stroke: #000000;
+  stroke-width: 1;
+  fill: none;
+  display: none;
+}
+
+.boundary-label {
+  background: rgba(255, 255, 255, 1);           /* 배경 제거 */
+  color: #000000;                /* 글자색 */
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  box-shadow: none;
+  padding: 2px 4px;
+  text-align: center;
+  pointer-events: none;       /* 클릭 차단 */
+  user-select: none;
+  opacity: 1;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+
+/* 화성시와 오산시 구분 스타일 */
+.boundary-layer.hwaseong-si {
+  fill: #E5F2FF !important; /* 옅은 파란색 */
+  stroke: #99CCFF !important;
+}
+
+.boundary-layer.osan-si {
+  fill: #FF9999 !important; /* 진한 빨간색 */
+  stroke: #FF6666 !important;
+}
+
+.boundary-layer.dongtan-dong {
+  fill: #FFE699 !important; /* 연한 주황색과 노란색 사이 */
+  stroke: #FFD966 !important;
+}
+
+.boundary-layer.dark-blue-area {
+  fill: #0066CC !important; /* 진한 파란색 */
+  stroke: #003399 !important;
+}
+
+.boundary-layer.medium-blue-area {
+  fill: #B3D9FF !important; /* 진한 옅은 파란색 */
+  stroke: #80C7FF !important;
+}
+
+.boundary-layer.light-blue-area {
+  fill: #6BA3D0 !important; /* 진한 연한 파란색 */
+  stroke: #4A7BA7 !important;
+}
